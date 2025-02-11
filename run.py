@@ -33,7 +33,7 @@ def is_valid_url(url):
     if check.netloc and check.scheme:
         return True
     else:
-        False
+        return False
 
 def generate_short_code():
     return "".join(random.choices(string.ascii_letters + string.digits, k = 6))
