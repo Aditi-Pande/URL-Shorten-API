@@ -33,7 +33,7 @@ def is_valid_url(url):
     if check.netloc and check.scheme:
         return True
     else:
-        return False
+        False
 
 def generate_short_code():
     return "".join(random.choices(string.ascii_letters + string.digits, k = 6))
@@ -84,5 +84,4 @@ def list_all_urls():
     return jsonify(urls)
 
 if __name__ == "__main__":
-    setup_db()
     app.run(host="0.0.0.0", debug=True)
